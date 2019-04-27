@@ -13,13 +13,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { UserHomeComponent } from './components/user-home/user-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    AdminHomeComponent,
+    UserHomeComponent
   ],
   imports: [
     BrowserModule,
