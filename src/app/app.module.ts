@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { NgModule } from '@angular/core';
+import {ChartsModule} from 'ng2-charts'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app.module.material';
@@ -15,11 +16,9 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-<<<<<<< HEAD
 import { AreaSituationComponent } from './components/area-situation/area-situation.component';
-=======
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
->>>>>>> 2b1546429f8376c43d54c5e859047c6570f2fd9b
+import { MeteorologyComponent } from './components/meteorology/meteorology.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +28,9 @@ import { CreateRiskAreaComponent } from './components/create-risk-area/create-ri
     SignUpComponent,
     AdminHomeComponent,
     UserHomeComponent,
-<<<<<<< HEAD
     AreaSituationComponent,
-=======
-    CreateRiskAreaComponent
->>>>>>> 2b1546429f8376c43d54c5e859047c6570f2fd9b
+    CreateRiskAreaComponent,
+    MeteorologyComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +44,7 @@ import { CreateRiskAreaComponent } from './components/create-risk-area/create-ri
     ReactiveFormsModule,
     NgImageSliderModule,
     ColorPickerModule,
-    
+    ChartsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

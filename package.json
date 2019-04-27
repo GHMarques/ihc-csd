@@ -29,16 +29,15 @@
     "@angular/router": "~7.1.0",
     "@mapbox/mapbox-gl-draw": "^1.1.1",
     "@mapbox/mapbox-gl-geocoder": "^4.1.2",
+    "chart.js": "^2.8.0",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
     "jquery": "^3.4.0",
-<<<<<<< HEAD
-    "moment": "^2.24.0",
-=======
     "mapbox-gl": "^0.54.0",
     "mapbox-gl-draw": "^0.16.0",
->>>>>>> 2b1546429f8376c43d54c5e859047c6570f2fd9b
+    "moment": "^2.24.0",
     "ng-image-slider": "^1.3.0",
+    "ng2-charts": "^2.2.2",
     "ngx-color-picker": "^7.5.0",
     "ngx-moment": "^3.4.0",
     "rxjs": "~6.3.3",
