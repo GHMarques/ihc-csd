@@ -13,9 +13,13 @@ declare const $: any;
 export class NavbarComponent implements OnInit {
   navBarOpen = false;
   isAuthenticated: boolean;
+  isUser: boolean;
+  isAdmin : boolean;
 
   constructor(private authService: AuthService, private router: Router, private snackBar: MatSnackBar) {
     this.authService.loggedIn.subscribe(status => this.isAuthenticated = status);
+    this.authService.adminLoggedIn.subscribe(status => this.isAdmin = status);
+    this.authService.userLoggedIn.subscribe(status => this.isUser = status);
   }
 
   ngOnInit() {
@@ -45,6 +49,11 @@ export class NavbarComponent implements OnInit {
     $('.nav-bar').width( '0px' );
     $('#content').css({'margin-left' : '0px'});
     $('.top-header').css({'display' : 'block'});
+  }
+
+  logout(){
+    this.authService.logout();
+    this.router.navigateByUrl('/sign-in');
   }
 
 }

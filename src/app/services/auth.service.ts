@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 export class AuthService {
   private userToken;
   public loggedIn = new BehaviorSubject <boolean>(false);
+  public adminLoggedIn = new BehaviorSubject <boolean>(false);
+  public userLoggedIn = new BehaviorSubject <boolean>(false);
 
   constructor(private http: Http) { this.userToken = null; }
 
@@ -39,10 +41,16 @@ export class AuthService {
     if(userData.username == 'a@a'){ //admin
       this.userToken.type = 0;
       localStorage.setItem('userToken', JSON.stringify({ token: this.userToken }));
+      this.loggedIn.next(true);
+      this.adminLoggedIn.next(true);
+      this.userLoggedIn.next(false);
       return true;
     } else if(userData.username == 'b@b'){ //user
       this.userToken.type = 1;
       localStorage.setItem('userToken', JSON.stringify({ token: this.userToken }));
+      this.loggedIn.next(true);
+      this.adminLoggedIn.next(false);
+      this.userLoggedIn.next(true);
       return true;
     } else {
       return false;
@@ -67,6 +75,8 @@ export class AuthService {
   logout(): void {
     // clear token remove user from local storage to log user out
     this.loggedIn.next(false);
+    this.adminLoggedIn.next(false);
+    this.userLoggedIn.next(false);
     this.userToken = null;
     localStorage.removeItem('userToken');
   }

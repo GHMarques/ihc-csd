@@ -7,7 +7,11 @@
 
   
 
-  <!-- ROTAS COMUNS USUARIO AUTENTICADO -->
+  <!-- ROTAS COMUNS ADMIN -->
+  <a *ngIf="isAuthenticated && isAdmin" (click)="logout()"><i class="material-icons">arrow_back</i>Logout</a>
+
+  <!-- ROTAS COMUNS USER -->
+  <a *ngIf="isAuthenticated && isUser" (click)="logout()"><i class="material-icons">arrow_back</i>Logout</a>
 
 </div>
 
