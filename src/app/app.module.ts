@@ -15,6 +15,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
+import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
     SignInComponent,
     SignUpComponent,
     AdminHomeComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    CreateRiskAreaComponent
   ],
   imports: [
     BrowserModule,
