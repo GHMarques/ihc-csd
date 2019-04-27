@@ -15,6 +15,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
+import { AreaSituationComponent } from './components/area-situation/area-situation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
     SignInComponent,
     SignUpComponent,
     AdminHomeComponent,
-    UserHomeComponent
+    UserHomeComponent,
+    AreaSituationComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
     ReactiveFormsModule,
     NgImageSliderModule,
     ColorPickerModule,
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
