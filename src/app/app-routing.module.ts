@@ -7,6 +7,8 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { AreaSituationComponent } from './components/area-situation/area-situation.component';
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
+import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
+import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'user-home', component: UserHomeComponent },
   { path: 'area-situation', component: AreaSituationComponent },
   { path: 'create-risk-area', component: CreateRiskAreaComponent },
+  { path: 'list-risk-area', component: ListRiskAreaComponent },
+  { path: 'info-risk-area/:id', component: InfoRiskAreaComponent },
   { path: 'meteorology', component: MeteorologyComponent },
   
 ];

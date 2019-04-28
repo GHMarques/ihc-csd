@@ -5,7 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { NgModule } from '@angular/core';
-import {ChartsModule} from 'ng2-charts'
+import { ChartsModule } from 'ng2-charts';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app.module.material';
@@ -24,6 +25,7 @@ import { ChatService } from './services/chat.service';
 import { CoolStorageModule } from '@angular-cool/storage';
 
 import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
+import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-are
     CreateRiskAreaComponent,
     MeteorologyComponent,
     ChatComponent,
-    ListRiskAreaComponent
+    ListRiskAreaComponent,
+    InfoRiskAreaComponent
   ],
   imports: [
   BrowserModule,
@@ -52,7 +55,8 @@ import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-are
     NgImageSliderModule,
     ColorPickerModule,
     ChartsModule,
-    CoolStorageModule
+    CoolStorageModule,
+    MatTableModule
   ],
   providers: [AuthService, ChatService],
   bootstrap: [AppComponent]

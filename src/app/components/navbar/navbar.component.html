@@ -10,6 +10,7 @@
   <!-- ROTAS COMUNS ADMIN -->
   <a [routerLink]="['admin-home']" *ngIf="isAuthenticated && isAdmin"><i class="material-icons">home</i>Home</a>
   <a [routerLink]="['create-risk-area']" *ngIf="isAuthenticated && isAdmin"><i class="material-icons">map</i>Cadastrar área de risco</a>
+  <a [routerLink]="['list-risk-area']" *ngIf="isAuthenticated && isAdmin"><i class="material-icons">list_alt</i>Listar área de risco</a>
   <a *ngIf="isAuthenticated && isAdmin" (click)="logout()"><i class="material-icons">arrow_back</i>Logout</a>
 
   <!-- ROTAS COMUNS USER -->

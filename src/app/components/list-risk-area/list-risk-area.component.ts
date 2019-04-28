@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { RiskArea } from '../../classes/risk-area';
 
 @Component({
   selector: 'app-list-risk-area',
@@ -7,9 +9,54 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRiskAreaComponent implements OnInit {
 
+  public riskAreaArray: RiskArea[] = [
+    {
+      name: 'Localização 1',
+      center: {
+        latitude: -19.939165045090476,
+        longitude: -43.999111399648655
+      },
+      area: [],
+      situation: 0
+    },
+    {
+      name: 'Localização 2',
+      center: {
+        latitude: 0,
+        longitude: 0
+      },
+      area: [],
+      situation: 1
+    },
+    {
+      name: 'Localização 3',
+      center: {
+        latitude: 0,
+        longitude: 0
+      },
+      area: [],
+      situation: 2
+    }
+  ];
+
   constructor() { }
 
+  displayedColumns: string[] = ['name'];
+  dataSource = new MatTableDataSource<RiskArea>(this.riskAreaArray);
+
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }
