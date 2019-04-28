@@ -12,7 +12,7 @@ export class ChatComponent implements OnInit {
   chatHistory = [];
   message: String = '';
   showMessageOpen = false
-  
+
   constructor(
     public chatService: ChatService
   ) {
@@ -46,29 +46,29 @@ export class ChatComponent implements OnInit {
     if (msg !== '') {
       this.chatHistory.push(myMsg);
     }
-    this.chatService.callWatson(msg).subscribe(
-      (res) => {
-        this.chatService.setCtx(res.context);
-        res.output.generic.forEach(element => {
-          const newMsg = {
-            bot: true,
-            type: element.response_type,
-            title: element.title || null,
-            text: element.text || null,
-            buttons: element.options || null,
-            img: element.source || null,
-            description: element.description || null,
-          };
-          this.chatHistory.push(newMsg);
-        });
-      },
-      (err) => {
-        this.chatHistory.push({
-          bot: true,
-          text: 'Ops... Algo deu errado...\nReveja as credenciais na configuração!'
-        });
-      }
-    );
+    // this.chatService.callWatson(msg).subscribe(
+    //   (res) => {
+    //     this.chatService.setCtx(res.context);
+    //     res.output.generic.forEach(element => {
+    //       const newMsg = {
+    //         bot: true,
+    //         type: element.response_type,
+    //         title: element.title || null,
+    //         text: element.text || null,
+    //         buttons: element.options || null,
+    //         img: element.source || null,
+    //         description: element.description || null,
+    //       };
+    //       this.chatHistory.push(newMsg);
+    //     });
+    //   },
+    //   (err) => {
+    //     this.chatHistory.push({
+    //       bot: true,
+    //       text: 'Ops... Algo deu errado...\nReveja as credenciais na configuração!'
+    //     });
+    //   }
+    // );
     this.message = '';
   }
 

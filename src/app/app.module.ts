@@ -23,6 +23,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { ChatService } from './services/chat.service';
 import { CoolStorageModule } from '@angular-cool/storage';
 
+import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CoolStorageModule } from '@angular-cool/storage';
     AreaSituationComponent,
     CreateRiskAreaComponent,
     MeteorologyComponent,
-    ChatComponent
+    ChatComponent,
+    ListRiskAreaComponent
   ],
   imports: [
   BrowserModule,

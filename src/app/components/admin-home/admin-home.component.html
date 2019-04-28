@@ -1,3 +1,15 @@
-<p>
-  admin-home works!
-</p>
+<h1>Olá Admin, escolha uma das opções abaixo:</h1>
+<section class="container row">
+	<div class="item" [routerLink]="['/create-risk-area']">
+    <div class="title">Cadastrar área de risco</div>
+    <div class="content">
+        <i class="material-icons md-100">add_location</i>
+    </div>
+  </div>
+  <div class="item">
+    <div class="title">Listar áreas de risco</div>
+    <div class="content">
+        <i class="material-icons md-100">list_alt</i>
+    </div>
+  </div>
+</section>
