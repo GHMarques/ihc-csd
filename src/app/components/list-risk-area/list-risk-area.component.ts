@@ -14,8 +14,8 @@ export class ListRiskAreaComponent implements OnInit {
     {
       name: 'Localização 1',
       center: {
-        latitude: -19.939165,
-        longitude: -43.99911
+        latitude: -19.939165045090476,
+        longitude: -43.999111399648655
       },
       area: [],
       situation: 0

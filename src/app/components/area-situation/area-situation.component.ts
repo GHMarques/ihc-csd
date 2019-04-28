@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
-import 'moment/locale/pt-br'
+import 'moment/locale/pt-br';
 @Component({
   selector: 'app-area-situation',
   templateUrl: './area-situation.component.html',
