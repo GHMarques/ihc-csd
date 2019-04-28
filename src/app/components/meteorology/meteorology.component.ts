@@ -17,7 +17,7 @@ export class MeteorologyComponent implements OnInit {
     {'day': moment(new Date().setDate(new Date().getDate() + 6 )).utc().format('L'), 'danger': this.danger[1]}
   ] 
 
-
+  quantity = 9
   colors = [];
   hoverColors = [];
   barDatas = []; //[28, 48, 40, 19, 86, 27, 90];
@@ -26,13 +26,13 @@ export class MeteorologyComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true,
   };
-  barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'];
+  //barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014'];
+  barChartLabelsHours = [];
   barChartType = 'bar';
   barChartLegend = true;
   barChartData = [
     {data: [], 
       label: 'Intensidade de Chuva', 
-      
       /*
         esses 4 atributos devem ser alterados.
         Cada coluna corresponde a um indice de cada vetor, nesse caso temos duas colunas coloridas
@@ -53,37 +53,49 @@ export class MeteorologyComponent implements OnInit {
 
   ngOnInit() {
     this.setBarDatas();
-    this.createColors();
+    this.initLabelHours(this.barChartLabelsHours);
+    this.createColors(this.barChartData[0]);
   }
 
   setBarDatas() {
-    let len = 9;
-    for (let i=0; i<len; i++) {
+    for (let i=0; i<this.quantity; i++) {
       this.barDatas.push(Math.round(Math.random()*10));
     }
 
     this.barChartData[0].data = this.barDatas;
   }
 
-  createColors() {
-    this.colors = [];
-    this.hoverColors = [];
+  initLabelHours(label) {
+    let begin = -Math.floor((this.quantity/2));
+    for (let i=0; i<this.quantity; i++) {
+      let hour = moment(new Date().setHours(new Date().getHours() + (begin+i) )).local().format('LT');
+      console.log(hour);
+      console.log(begin+i)
+      label.push(hour);
+    }
+  }
 
+  createColors(chart) {
     let min = 50;
-    let max = 240;
+    let max = 220;
 
     let r = 0;
     let g = min;
     let b = min;
     
-    let n = this.barDatas.length
+    let datas = chart.data
+    let n = datas.length
     for (let i=0; i<n; i++) {
-      let val = this.barDatas[i];
-      val = min + (max - min)*(val/n);
+      let val = min + (max - min)*(datas[i]/n);
       g = b = val;
       this.colors.push('rgba('+r+', '+g+', '+b+', 1)');
+      r = g = b = min;
+      this.hoverColors.push('rgba('+r+', '+g+', '+b+', 1)');
     }
 
-    this.barChartData[0].backgroundColor = this.colors;
+    chart.backgroundColor = this.colors;
+    chart.borderColor = this.colors;
+    chart.hoverBackgroundColor = this.hoverColors;
+    chart.hoverBorderColor = this.hoverColors;
   }
 }

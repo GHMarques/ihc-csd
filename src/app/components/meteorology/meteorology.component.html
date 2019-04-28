@@ -2,7 +2,7 @@
   <div style="display: block; width: 60%; height: auto">
     <canvas baseChart
             [datasets]="barChartData"
-            [labels]="barChartLabels"
+            [labels]="barChartLabelsHours"
             [options]="barChartOptions"
             [legend]="barChartLegend"
             [chartType]="barChartType">
@@ -13,14 +13,3 @@
    <!-- Para criar o outro gráfico, de duração de chuva
   deve-se criar novos atributos, como 'barChartData' e os 
 demais, para o gráfico 2 abaixo reconhecer de quem puxar os dados -->
-
-  <div style="display: block; width: 60%; height: auto">
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
-    </canvas>
-  </div>
-</div>
