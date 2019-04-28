@@ -1,0 +1,18 @@
+#open-chat-btn {
+    background-color: #4B4453;
+	color: white;
+	position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    z-index: 10;
+}
+
+app-chat {
+    width: 60%;
+}
+
+.main {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}

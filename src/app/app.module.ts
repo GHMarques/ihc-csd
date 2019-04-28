@@ -19,6 +19,10 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { AreaSituationComponent } from './components/area-situation/area-situation.component';
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { ChatService } from './services/chat.service';
+import { CoolStorageModule } from '@angular-cool/storage';
+
 
 @NgModule({
   declarations: [
@@ -30,10 +34,11 @@ import { MeteorologyComponent } from './components/meteorology/meteorology.compo
     UserHomeComponent,
     AreaSituationComponent,
     CreateRiskAreaComponent,
-    MeteorologyComponent
+    MeteorologyComponent,
+    ChatComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
     BrowserAnimationsModule,
@@ -44,9 +49,10 @@ import { MeteorologyComponent } from './components/meteorology/meteorology.compo
     ReactiveFormsModule,
     NgImageSliderModule,
     ColorPickerModule,
-    ChartsModule
+    ChartsModule,
+    CoolStorageModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
