@@ -1,1 +1,14 @@
-<div id="map"></div>
+<section class="container">
+  <h1>Cadastrar área de risco</h1>
+  <form [formGroup]="riskAreaForm">
+      <mat-form-field class="input">
+        <input matInput placeholder="Nome" formControlName="name" required>
+        <mat-error *ngIf="riskAreaForm.get('name').hasError('required')">
+          Digite o nome da área
+        </mat-error>
+      </mat-form-field>   
+      <label class="label">Desenhe no mapa a área de risco</label>      
+      <div id="map"></div>
+      <button [routerLink]="['/list-risk-area']" mat-raised-button color="primary">Cadastrar</button>
+    </form>
+</section>

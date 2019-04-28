@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 import { RiskArea } from '../../classes/risk-area';
 
 @Component({
@@ -13,8 +14,8 @@ export class ListRiskAreaComponent implements OnInit {
     {
       name: 'Localização 1',
       center: {
-        latitude: -19.939165045090476,
-        longitude: -43.999111399648655
+        latitude: -19.939165,
+        longitude: -43.99911
       },
       area: [],
       situation: 0
@@ -41,14 +42,16 @@ export class ListRiskAreaComponent implements OnInit {
 
   constructor() { }
 
-  displayedColumns: string[] = ['name'];
+  displayedColumns: string[] = ['name', 'latitude', 'longitude', 'situation', 'options'];
   dataSource = new MatTableDataSource<RiskArea>(this.riskAreaArray);
 
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
-
+  
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.filterPredicate = function(data, filter: string): boolean {
+      return data.name.toLowerCase().includes(filter);
+    };
   }
 
   applyFilter(filterValue: string) {

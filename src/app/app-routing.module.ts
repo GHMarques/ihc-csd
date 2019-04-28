@@ -12,6 +12,7 @@ import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-are
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
 
 const routes: Routes = [
+  { path: '', component: SignInComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'admin-home', component: AdminHomeComponent },

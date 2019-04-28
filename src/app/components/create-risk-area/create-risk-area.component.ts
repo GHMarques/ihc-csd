@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import * as mapboxgl from 'mapbox-gl';
 import * as MapboxDraw from '@mapbox/mapbox-gl-draw';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
@@ -12,6 +13,11 @@ export class CreateRiskAreaComponent implements OnInit {
   public map: any;
   public draw: any;
   constructor() { }
+  riskAreaForm = new FormGroup({
+    name: new FormControl('', [
+      Validators.required
+    ])
+  });
 
   ngOnInit() {
     mapboxgl.accessToken = 'pk.eyJ1IjoiZ2htYXJxdWVzIiwiYSI6ImNqdXp0YWJnczFibGYzeXJ2empwem91b28ifQ.1m8Dtl9e1xtBrUgzVYHSmg';
