@@ -59,16 +59,19 @@ export class AuthService {
   }
 
   checkToken(){
-    /*const options = this.addAuthHeader(true);
-    return this.http.get(`/api/auth/checktoken`, options)
-      .map((res) => {
-        const resJSON = res.json();
-        if (resJSON.result === 'Success') {
-          this.loggedIn.next(true);
-        }
-        return resJSON;
-      });*/
+    const userToken = JSON.parse(localStorage.getItem('userToken'));
+    if(userToken){
       this.loggedIn.next(true);
+      if(userToken.token.type == 0){
+        this.adminLoggedIn.next(true);
+        this.userLoggedIn.next(false);
+      } else {
+        this.adminLoggedIn.next(false);
+        this.userLoggedIn.next(true);
+      }
+    } else {
+      this.logout();
+    }
   }
   
   // logout method

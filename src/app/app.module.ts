@@ -19,6 +19,7 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { AreaSituationComponent } from './components/area-situation/area-situation.component';
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
+import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MeteorologyComponent } from './components/meteorology/meteorology.compo
     UserHomeComponent,
     AreaSituationComponent,
     CreateRiskAreaComponent,
-    MeteorologyComponent
+    MeteorologyComponent,
+    ListRiskAreaComponent
   ],
   imports: [
     BrowserModule,

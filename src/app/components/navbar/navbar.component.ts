@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
     this.authService.loggedIn.subscribe(status => this.isAuthenticated = status);
     this.authService.adminLoggedIn.subscribe(status => this.isAdmin = status);
     this.authService.userLoggedIn.subscribe(status => this.isUser = status);
+    this.authService.checkToken();
   }
 
   ngOnInit() {
@@ -37,6 +38,7 @@ export class NavbarComponent implements OnInit {
     } else {
       this.closeNavBar();
     }
+    this.authService.checkToken();
   }
 
   openNavBar(){
