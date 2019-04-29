@@ -16,6 +16,15 @@ export class CreateRiskAreaComponent implements OnInit {
   riskAreaForm = new FormGroup({
     name: new FormControl('', [
       Validators.required
+    ]),
+    inclination: new FormControl('', [
+      Validators.required
+    ]),
+    high: new FormControl('', [
+      Validators.required
+    ]),
+    potential: new FormControl('', [
+      Validators.required
     ])
   });
 
