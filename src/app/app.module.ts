@@ -17,7 +17,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-import { AreaSituationComponent } from './components/area-situation/area-situation.component';
+import { AreaSituationComponent } from './components/user-home/area-situation/area-situation.component';
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
 import { ChatComponent } from './components/chat/chat.component';
@@ -40,7 +40,7 @@ import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-are
     MeteorologyComponent,
     ChatComponent,
     ListRiskAreaComponent,
-    InfoRiskAreaComponent
+    InfoRiskAreaComponent,
   ],
   imports: [
   BrowserModule,

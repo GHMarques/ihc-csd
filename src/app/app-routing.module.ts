@@ -5,7 +5,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-import { AreaSituationComponent } from './components/area-situation/area-situation.component';
+import { AreaSituationComponent } from './components/user-home/area-situation/area-situation.component';
 import { CreateRiskAreaComponent } from './components/create-risk-area/create-risk-area.component';
 import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
 import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';

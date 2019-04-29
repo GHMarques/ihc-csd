@@ -3,7 +3,7 @@
 .nav-bar {
     width: 300px;
     height: 100vh;
-    background-color: mat-color($csd-primary, default);
+    background-color: rgb(6, 59, 94);
     position: fixed;
     z-index: 10;
     top: 0;
@@ -59,7 +59,7 @@
 .top-header{
     z-index: 0;
     width: 100%;
-    background-color: mat-color($csd-primary, default);
+    background-color: rgb(6, 59, 94);
     padding-top: 5px;
     padding-bottom: 5px;
     a{

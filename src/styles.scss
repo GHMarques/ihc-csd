@@ -30,3 +30,7 @@ $csd-theme: mat-light-theme($csd-primary, $csd-accent, $csd-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-tab-header{
+    margin: auto!important;
+}

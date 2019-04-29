@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="title">Situação da Área</div>
+  <mat-tab-group animationDuration="0ms">
+    <mat-tab label="Sua localização ao vivo">Content 2</mat-tab>
+    <mat-tab label="Suas áreas cadastradas">
+    <div class="today-info-container" style="flex-wrap: wrap">
+      <div class="today-info-title">
+        {{today.day}}
+      </div>
+      <div class="today-info">
+        <div class="risk-img-container">
+          <img class="risk-img" src={{today.danger}}>
+        </div>
+        <div class="today-info-text">
+          info from today
+        </div>
+      </div>
+    </div>
+  
+    <div class="today-container-common">
+      <div *ngFor="let day of days" class="days-container">
+        <div class="today-info-title-bottom">
+          {{day.day}}
+        </div>
+        <div class="today-info-bottom">
+          <img class="risk-img" src={{day.danger}}>
+        </div>
+      </div>
+    </div>
+    </mat-tab>
+  </mat-tab-group>  
+</div>

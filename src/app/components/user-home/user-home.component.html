@@ -1,3 +1,27 @@
-<p>
-  user-home works!
-</p>
+<h1>Bem Vindo, usuário!</h1>
+<section class="container row">
+	<div class="item" [routerLink]="['']">
+    <div class="title">Cadastrar área</div>
+    <div class="content">
+        <i class="material-icons md-100">add_location</i>
+    </div>
+  </div>
+  <div class="item" [routerLink]="['']">
+    <div class="title">Meteorologia</div>
+    <div class="content">
+        <i class="material-icons md-100">wb_sunny</i>
+    </div>
+  </div>
+  <div class="item" [routerLink]="['']">
+    <div class="title">Configurações</div>
+    <div class="content">
+        <i class="material-icons md-100">settings</i>
+    </div>
+  </div>
+  <div class="item" [routerLink]="['/area-situation']">
+    <div class="title">Situação</div>
+    <div class="content">
+        <i class="material-icons md-100">info</i>
+    </div>
+  </div>
+</section>
