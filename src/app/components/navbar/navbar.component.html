@@ -14,6 +14,11 @@
   <a *ngIf="isAuthenticated && isAdmin" (click)="logout()"><i class="material-icons">arrow_back</i>Logout</a>
 
   <!-- ROTAS COMUNS USER -->
+  <a [routerLink]="['user-home']" *ngIf="isAuthenticated && isUser"><i class="material-icons">home</i>Home</a>
+  <a [routerLink]="['user-home']" *ngIf="isAuthenticated && isUser"><i class="material-icons">add_location</i>Cadastrar área</a>
+  <a [routerLink]="['meteorology']" *ngIf="isAuthenticated && isUser"><i class="material-icons">wb_sunny</i>Meteorologia</a>
+  <a [routerLink]="['config']" *ngIf="isAuthenticated && isUser"><i class="material-icons">settings</i>Configuração</a>
+  <a [routerLink]="['area-situation']" *ngIf="isAuthenticated && isUser"><i class="material-icons">info</i>Situação</a>
   <a *ngIf="isAuthenticated && isUser" (click)="logout()"><i class="material-icons">arrow_back</i>Logout</a>
 
 </div>
