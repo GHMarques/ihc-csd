@@ -1,0 +1,41 @@
+<section class="container">
+    <div class="titlePage">Configurações</div>
+
+    <form [formGroup]="configForm">
+        <label class="label">Defina suas preferências abaixo:</label>
+        <br/>
+        <br/>
+        <!-- exibition -->
+        <label>Modo de exibição:</label>
+        <br/>
+        <input type="radio" formControlName="exibition" value="1"> Normal 
+        <input type="radio" formControlName="exibition" value="2"> Daltonismo
+        <input type="radio" formControlName="exibition" value="3"> Noturno
+        <br/>
+        <br/>
+        <!-- fontSize -->
+        <label>Fonte:&nbsp;</label>
+        <br/>
+        <input #ranger type="range" min="12" max="36" formControlName="fontSize" value="20" (input)="font = ranger.value"> 
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        {{font}}
+        <br/>
+        <br/>
+        <!-- Notification -->
+        <label>Receber notificações?</label>
+        <br/>
+        <input type="radio" formControlName="notification" value="1"> Sim 
+        <input type="radio" formControlName="notification" value="2"> Não
+        <br/>
+        <br/>
+        <!-- sms -->
+        <label>Deseja receber nossos sms?&nbsp;</label>
+        <br/>
+        <input type="radio" formControlName="sms" value="1"> Sim 
+        <input type="radio" formControlName="sms" value="2"> Não
+        <br/>
+        <br/>
+        <br/>  
+        <button mat-raised-button color="primary" style="display: block; margin: auto;">Salvar alterações</button>
+      </form>
+  </section>

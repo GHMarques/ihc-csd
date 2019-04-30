@@ -26,6 +26,7 @@ import { CoolStorageModule } from '@angular-cool/storage';
 
 import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
 import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';
+import { ConfigComponent } from './components/config/config.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-are
     ChatComponent,
     ListRiskAreaComponent,
     InfoRiskAreaComponent,
+    ConfigComponent,
   ],
   imports: [
   BrowserModule,

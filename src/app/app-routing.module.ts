@@ -10,6 +10,7 @@ import { CreateRiskAreaComponent } from './components/create-risk-area/create-ri
 import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-area.component';
 import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
+import { ConfigComponent } from './components/config/config.component';
 
 const routes: Routes = [
   { path: '', component: SignInComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'list-risk-area', component: ListRiskAreaComponent },
   { path: 'info-risk-area/:id', component: InfoRiskAreaComponent },
   { path: 'meteorology', component: MeteorologyComponent },
-  
+  { path: 'config', component: ConfigComponent },
 ];
 
 @NgModule({

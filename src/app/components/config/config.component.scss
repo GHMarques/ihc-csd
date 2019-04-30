@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 40px auto;
+    border: 2px solid #bfbfbf;
+    border-radius: 20px;
+    padding: 21px;
+}
+.titlePage{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 24px;
+}
+form{
+    label{
+        display: block;
+        width: 100%;
+    }
+}
