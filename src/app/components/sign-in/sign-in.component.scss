@@ -1,13 +1,27 @@
 .login-box {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: calc(100vh - 65px);
   width: 100%;
+  flex-wrap: wrap;
+}
+
+.logo-holder{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  img{
+    width: 180px;
+    height: 180px;
+  }
 }
 
 mat-card{
   min-height: 30vh;
+  margin-top: -170px;
 }
 
 
