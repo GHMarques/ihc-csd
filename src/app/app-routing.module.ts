@@ -11,6 +11,7 @@ import { ListRiskAreaComponent } from './components/list-risk-area/list-risk-are
 import { InfoRiskAreaComponent } from './components/info-risk-area/info-risk-area.component';
 import { MeteorologyComponent } from './components/meteorology/meteorology.component';
 import { ConfigComponent } from './components/config/config.component';
+import { SetRiskAreaComponent } from './components/set-risk-area/set-risk-area.component';
 
 const routes: Routes = [
   { path: '', component: SignInComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'info-risk-area/:id', component: InfoRiskAreaComponent },
   { path: 'meteorology', component: MeteorologyComponent },
   { path: 'config', component: ConfigComponent },
+  { path: 'set-risk-area', component: SetRiskAreaComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,16 @@
+<section class="container">
+  <div class="titlePage">Cadastre sua área de risco</div>
+  <form [formGroup]="riskAreaForm">
+      <div>Informe qual área de risco deseja cadastrar:</div>
+      <mat-form-field class="input">
+        <mat-select required>
+          <mat-option value="option">CEFET</mat-option>
+          <mat-option value="option">Encosta X</mat-option>
+          <mat-option value="option">Morro Y</mat-option>
+        </mat-select>
+        <mat-label><mat-icon>visibility</mat-icon> Selecione a área que deseja monitorar</mat-label>
+      </mat-form-field>   
+      <div id="map"></div>
+      <button [routerLink]="['/user-home']" mat-raised-button color="primary">Cadastrar</button>
+    </form>
+</section>

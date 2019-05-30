@@ -7,26 +7,31 @@
           Digite o nome da área
         </mat-error>
       </mat-form-field>
-      <label class="label">Informe o nível de risco dos parâmetros abaixo</label>
+      <div class="titleCenter">Informe o nível de risco dos parâmetros abaixo</div>
       <br/>
       <!-- Inclination -->
-      <label>Inclinação:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+      <label>Inclinação *</label>
+      <br/>
       <input type="radio" formControlName="inclination" value="1"> Muito baixo 
       <input type="radio" formControlName="inclination" value="2"> Baixo
       <input type="radio" formControlName="inclination" value="3"> Médio
       <input type="radio" formControlName="inclination" value="4"> Alto
       <input type="radio" formControlName="inclination" value="5"> Muito alto
       <br/>
+      <br/>
       <!-- High -->
-      <label>Altura:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <label>Altura *</label>
+      <br/>
       <input type="radio" formControlName="high" value="1"> Muito baixo 
       <input type="radio" formControlName="high" value="2"> Baixo
       <input type="radio" formControlName="high" value="3"> Médio
       <input type="radio" formControlName="high" value="4"> Alto
       <input type="radio" formControlName="high" value="5"> Muito alto
       <br/>
+      <br/>
       <!-- Potential -->
-      <label>Potencial de vítimas:&nbsp;</label>
+      <label>Potencial de vítimas *</label>
+      <br/>
       <input type="radio" formControlName="potential" value="1"> Muito baixo 
       <input type="radio" formControlName="potential" value="2"> Baixo
       <input type="radio" formControlName="potential" value="3"> Médio
@@ -34,7 +39,7 @@
       <input type="radio" formControlName="potential" value="5"> Muito alto
       <br/>
       <br/>
-      <label class="label">Desenhe no mapa a área de risco:</label>      
+      <div class="titleCenter">Desenhe no mapa a área de risco:</div>      
       <div id="map"></div>
       <button [routerLink]="['/list-risk-area']" mat-raised-button color="primary">Cadastrar</button>
     </form>
