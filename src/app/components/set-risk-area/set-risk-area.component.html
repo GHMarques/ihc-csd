@@ -1,12 +1,10 @@
 <section class="container">
-  <div class="titlePage">Cadastre sua área de risco</div>
+  <div class="titlePage">Cadastre sua área</div>
   <form [formGroup]="riskAreaForm">
-      <div>Informe qual área de risco deseja cadastrar:</div>
       <mat-form-field class="input">
-        <mat-select required>
-          <mat-option value="option">CEFET</mat-option>
-          <mat-option value="option">Encosta X</mat-option>
-          <mat-option value="option">Morro Y</mat-option>
+        <mat-select required (selectionChange)="changeCenter($event)">
+          <mat-option value="2">CEFET - Campus I</mat-option>
+          <mat-option value="1">CEFET - Campus II</mat-option>
         </mat-select>
         <mat-label><mat-icon>visibility</mat-icon> Selecione a área que deseja monitorar</mat-label>
       </mat-form-field>   
