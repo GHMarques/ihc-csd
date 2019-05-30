@@ -1,7 +1,9 @@
 <section class="closed" [style.visibility]="!openChat ? 'visible' : 'hidden'">
-  <button mat-fab id="open-chat-btn"  color="primary" (click)='openChat = !openChat' matTooltip="Abrir chat" color="primary">
-    <mat-icon>chat</mat-icon>
-  </button>
+  <a href="https://assistant-chat-us-south.watsonplatform.net/web/public/894face3-56ed-40a9-a1ae-1add737becae" target="_blank">
+    <button mat-fab id="open-chat-btn"  color="primary" matTooltip="Abrir chat" color="primary">
+      <mat-icon>chat</mat-icon>
+    </button>
+  </a>
 </section>
 
 <section class="opened" [style.visibility]="openChat ? 'visible' : 'hidden'">
