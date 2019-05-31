@@ -1,26 +1,32 @@
 <section class="container column">
-  <div class="title">Informações da área de risco</div>
-  <div>
-    <label class="label">Nome:</label>
-    <label class="information"> Localização 1</label>
+  <div style="box-shadow: 6px 7px 16px 0 rgba(0, 0, 0, 0.2);
+              border-radius: 12px;
+              padding-bottom: 12px;
+              margin-top: 20px;">
+      <div class="title">Informações da área de risco</div>
+        <div class="a1">
+          <div class="label">Nome:</div>
+          <div class="information"> Localização 1</div>
+        </div>
+        <div class="a1">
+          <div class="label">Latitude:</div>
+          <div class="information">  -19.939165045090476</div>
+        </div>
+        <div class="a1">
+          <div class="label">Longitude:</div>
+          <div class="information">  -43.999111399648655</div>
+        </div>
+        <div class="a1">
+          <div class="label">Situação:</div>
+          <div class="information">  0</div>
+        </div>
+        <div class="a1">
+          <div class="label">Pessoas cadastradas:</div>
+          <div class="information">  10</div>
+        </div>
   </div>
-  <div>
-    <label class="label">Latitude:</label>
-    <label class="information">  -19.939165045090476</label>
-  </div>
-  <div>
-    <label class="label">Longitude:</label>
-    <label class="information">  -43.999111399648655</label>
-  </div>
-  <div>
-    <label class="label">Situação:</label>
-    <label class="information">  0</label>
-  </div>
-  <div>
-    <label class="label">Pessoas cadastradas:</label>
-    <label class="information">  10</label>
-  </div>
-  <label class="label">Situação nos próximos dias:</label>
+  
+  <div style="margin: 30px auto; text-align: center" class="label">Situação nos próximos dias:</div>
   <div class="today-container-common"> 
     <div *ngFor="let day of days" class="days-container">
       <div class="today-info-title-bottom">

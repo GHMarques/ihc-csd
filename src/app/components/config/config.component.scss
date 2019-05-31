@@ -2,21 +2,46 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: fit-content;
+    width: auto;
     margin: 40px auto;
-    border: 2px solid #bfbfbf;
     border-radius: 20px;
-    padding: 21px;
+    padding-bottom: 20px;
+    max-width: 80%;
 }
 .titlePage{
     width: 100%;
-    margin: 30px auto;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
+    background: #063b5e;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    flex-flow: row-reverse;
+    img{
+        width: 62px;
+    }
 }
 form{
+    width: fit-content;
+    padding-bottom: 20px;
+    border: 2px solid #bfbfbf;
+    border-radius: 25px;;
     label{
         display: block;
-        width: 100%;
+        width: 220px;
     }
+}
+
+.options-holder{
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }

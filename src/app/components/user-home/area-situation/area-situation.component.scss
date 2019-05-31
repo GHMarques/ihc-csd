@@ -84,11 +84,16 @@
 }
 .risk-img-container{
     width: 100px;
-    height: auto;
+    height: 100px;
     margin: 0 30px 0 0;
 }
 .risk-img{
     max-width: 100%;
     max-height: 100%;
     cursor: pointer;
+}
+@media (max-width: 768px){
+    .today-info-title, .today-info-text{
+        font-size: 20px;
+    }
 }

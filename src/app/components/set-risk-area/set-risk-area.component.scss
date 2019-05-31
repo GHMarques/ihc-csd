@@ -1,23 +1,38 @@
 #map {
   height: 45vh;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 .titlePage {
   font-size: 30px;
   width: 100%;
-  margin: 30px 0 0 0;
   text-align: center;
+  background-color: #063b5e;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: row-reverse;
+  img{
+    width: 62px;
+    margin-right: 40px;
+  }
 }
 
 .container {
-  max-width: 80%;
-  max-height: 100%;
-	margin: 0 auto;
-  border: 1px solid #ccc;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  max-width: 68%;
+    max-height: 100%;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+  // padding: 10px;
 }
 
 .label {
@@ -47,4 +62,16 @@ button {
 .titleCenter {
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 768px){
+  .container{
+    max-width: 88%;
+  }
+  .titlePage{
+    font-size: 20px;
+    img{
+      margin-right: 10px;
+    }
+  }
 }

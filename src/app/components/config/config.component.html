@@ -1,41 +1,61 @@
 <section class="container">
-    <div class="titlePage">Configurações</div>
 
     <form [formGroup]="configForm">
-        <label class="label">Defina suas preferências abaixo:</label>
-        <br/>
-        <br/>
-        <!-- exibition -->
-        <label>Modo de exibição:</label>
-        <br/>
-        <input type="radio" formControlName="exibition" value="1"> Normal 
-        <input type="radio" formControlName="exibition" value="2"> Daltonismo
-        <input type="radio" formControlName="exibition" value="3"> Noturno
-        <br/>
-        <br/>
-        <!-- fontSize -->
-        <label>Fonte:&nbsp;</label>
-        <br/>
-        <input #ranger type="range" min="12" max="36" formControlName="fontSize" value="20" (input)="font = ranger.value"> 
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        {{font}}
-        <br/>
-        <br/>
-        <!-- Notification -->
-        <label>Receber notificações?</label>
-        <br/>
-        <input type="radio" formControlName="notification" value="1"> Sim 
-        <input type="radio" formControlName="notification" value="2"> Não
-        <br/>
-        <br/>
-        <!-- sms -->
-        <label>Deseja receber nossos sms?&nbsp;</label>
-        <br/>
-        <input type="radio" formControlName="sms" value="1"> Sim 
-        <input type="radio" formControlName="sms" value="2"> Não
-        <br/>
-        <br/>
-        <br/>  
-        <button mat-raised-button color="primary" style="display: block; margin: auto;">Salvar alterações</button>
+        <div class="titlePage">Configurações<img src="assets/settings.svg"></div>
+        <div style="padding: 0 30px;">
+            <br/>
+            <!-- exibition -->
+           <div class="options-holder">
+            <label>Modo de exibição:</label>
+            <mat-form-field>
+                <select matNativeControl required>
+                  <option value="Normal">Normal</option>
+                  <option value="Daltonismo">Daltonismo</option>
+                  <option value="Noturno">Noturno</option>
+                </select>
+              </mat-form-field>
+           </div>
+            <br/>
+            <!-- fontSize -->
+            <div class="options-holder">
+                <label>Fonte:</label>
+                <input #ranger type="range" min="12" max="36" formControlName="fontSize" value="20" (input)="font = ranger.value">
+                {{font}}
+            </div>
+            <br/>
+            <br/>
+            <!-- Notification -->
+            <div class="options-holder">
+                <label>Deseja receber notificações?</label>
+                <mat-form-field>
+                    <select matNativeControl required>
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                    </select>
+                  </mat-form-field>    
+            </div>
+            <br/>
+            <!-- sms -->
+            <div class="options-holder">
+                <label>Deseja receber nossos sms?</label>
+                <mat-form-field>
+                    <select matNativeControl required>
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                    </select>
+                  </mat-form-field>
+            </div>
+            <br/>
+            <br/>  
+            <button
+            [routerLink]="['/user-home']"
+            mat-raised-button color="primary" style=" margin: 20px auto;
+            width: 150px;
+            display: block;
+            font-weight: 500;
+            font-size: 15px;
+            background-color: #063b5e">Salvar alterações</button>
+        </div>
+        
       </form>
   </section>

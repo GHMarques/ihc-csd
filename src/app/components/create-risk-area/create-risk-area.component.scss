@@ -1,23 +1,37 @@
 #map {
   height: 55vh;
-  width: 100%;
+    width: 88%;
+    margin: 0 auto 20px;
+    border-radius: 12px;
 }
 
 .titlePage {
   font-size: 30px;
   width: 100%;
-  margin: 30px 0 0 0;
   text-align: center;
+  background-color: #063b5e;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: row-reverse;
+  img{
+    width: 62px;
+    margin-right: 40px;
+  }
 }
 
 .container {
   max-width: 80%;
-  max-height: 100%;
-	margin: 0 auto;
-  border: 1px solid #ccc;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+    max-height: 100%;
+    margin: 20px auto 80px auto;
+    border: 1px solid #ccc;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .label {
@@ -46,5 +60,34 @@ button {
 
 .titleCenter {
   text-align: center;
-  width: 100%;
+  width: 90%;
+  padding: 16px;
+
+}
+.options-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  div{
+    margin: 0px 26px;
+    label{
+      margin-right: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .options-holder{
+    justify-content: flex-start;
+    mat-form-field{
+      width: 100%
+    }
+  }
+  .titlePage{
+    font-size: 20px;
+    img{
+      margin-right: 10px;
+    }
+  }
 }

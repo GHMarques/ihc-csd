@@ -1,14 +1,24 @@
 <section class="container">
-  <div class="titlePage">Cadastre sua área</div>
+  <div class="titlePage">Cadastre sua área<img src="assets/add.svg"></div>
   <form [formGroup]="riskAreaForm">
-      <mat-form-field class="input">
-        <mat-select required (selectionChange)="changeCenter($event)">
-          <mat-option value="2">CEFET - Campus I</mat-option>
-          <mat-option value="1">CEFET - Campus II</mat-option>
-        </mat-select>
-        <mat-label><mat-icon>visibility</mat-icon> Selecione a área que deseja monitorar</mat-label>
-      </mat-form-field>   
+    <div style="width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;">
+        <mat-form-field class="input">
+            <mat-select required (selectionChange)="changeCenter($event)">
+              <mat-option value="2">CEFET - Campus I</mat-option>
+              <mat-option value="1">CEFET - Campus II</mat-option>
+            </mat-select>
+            <mat-label><mat-icon>visibility</mat-icon> Selecione a área que deseja monitorar</mat-label>
+          </mat-form-field>
+    </div>  
       <div id="map"></div>
-      <button [routerLink]="['/user-home']" mat-raised-button color="primary">Cadastrar</button>
+      <button [routerLink]="['/user-home']" mat-raised-button color="primary" style=" margin: 20px auto;
+      width: 150px;
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      background-color: #063b5e">Cadastrar</button>
     </form>
 </section>
