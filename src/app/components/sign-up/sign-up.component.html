@@ -43,7 +43,7 @@
           </mat-form-field>            
   
           <button mat-raised-button color="primary" (click)="register()" >Cadastrar</button>
-          <a [routerLink]="['/sign-in']" *ngIf="!isAuthenticated">
+          <a [routerLink]="['/sign-in']">
             <button mat-raised-button color="primary">Voltar</button>
           </a>
         </form>
