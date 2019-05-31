@@ -1,0 +1,79 @@
+@import  'src/app/components/user-home/area-situation/area-situation.component.scss';
+
+.meteorology-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+.meteorology-title{
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 40px 0;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.chart-holder{
+    width: 60%;
+    height: auto;
+}
+
+.days-container{
+    width: 80%;
+}
+.today-info-bottom{
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+}
+.today-info-title-bottom{
+    flex-wrap: wrap;
+}
+.feedback-container{
+    width: 100%;
+    margin: 0px 0 20px 0;
+}
+.send-feedback{
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 100px;
+    height: 41px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: #063b5e;
+    color: white;
+    &:hover{
+        background-color: white;
+        border: 2px solid rgb(6, 59, 94);
+        color: rgb(6, 59, 94);
+    }
+}
+
+.msg{
+    margin: 0;
+    width: 100%;
+}
+
+@media (max-width: 720px){
+    .chart-holder{
+        width: 85%;
+    }
+    .days-container{
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 1300px){
+    .chart-holder{
+        width: 750px;
+    }
+    .days-container{
+        width: 750px;
+    }
+}

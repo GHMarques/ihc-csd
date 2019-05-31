@@ -1,5 +1,6 @@
-<div>
-  <div style="display: block; width: 60%; height: auto">
+<div class="meteorology-container">
+  <div class="meteorology-title">Índices de chuva das últimas horas</div>
+  <div class="chart-holder">
     <canvas baseChart
             [datasets]="barChartData"
             [labels]="barChartLabelsHours"
@@ -8,8 +9,37 @@
             [chartType]="barChartType">
     </canvas>
   </div>
+  
 
 
-   <!-- Para criar o outro gráfico, de duração de chuva
-  deve-se criar novos atributos, como 'barChartData' e os 
-demais, para o gráfico 2 abaixo reconhecer de quem puxar os dados -->
+  <div class="today-container-common">
+    <div class="days-container">
+      <div class="today-info-title-bottom">
+        <p class="msg">Algum dado acima não bate?</p>
+        <p class="msg">Conte pra gente e nos ajude a manter as informações sempre atualizadas!</p>
+      </div>
+      <div class="today-info-bottom">
+        <mat-form-field>
+          <mat-label>Horário</mat-label>
+          <select matNativeControl required>
+            <option *ngFor="let hour of testLabels" value="hour">{{hour}}</option>
+          </select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Nível real da chuva</mat-label>
+          <select matNativeControl required>
+            <option *ngFor="let quantity of [0,1,2,3,4,5,6,7,8,9]" value="quantity">{{quantity}}</option>
+          </select>
+        </mat-form-field>
+      
+        <div class="feedback-container">
+          <button class="send-feedback">Enviar</button>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+</div>

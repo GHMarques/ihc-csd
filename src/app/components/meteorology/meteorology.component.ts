@@ -15,7 +15,9 @@ export class MeteorologyComponent implements OnInit {
     {'day': moment(new Date().setDate(new Date().getDate() + 4 )).utc().format('L'), 'danger': this.danger[2]},
     {'day': moment(new Date().setDate(new Date().getDate() + 5 )).utc().format('L'), 'danger': this.danger[2]},
     {'day': moment(new Date().setDate(new Date().getDate() + 6 )).utc().format('L'), 'danger': this.danger[1]}
-  ] 
+  ]
+
+  testLabels = []
 
   quantity = 9
   colors = [];
@@ -66,13 +68,12 @@ export class MeteorologyComponent implements OnInit {
   }
 
   initLabelHours(label) {
-    let begin = -Math.floor((this.quantity/2));
+    // let begin = -Math.floor((this.quantity/2));
     for (let i=0; i<this.quantity; i++) {
-      let hour = moment(new Date().setHours(new Date().getHours() + (begin+i) )).local().format('LT');
-      console.log(hour);
-      console.log(begin+i)
+      let hour = moment(new Date().setHours(new Date().getHours() + i - this.quantity )).local().format('LT');
       label.push(hour);
     }
+    this.testLabels = [...label];
   }
 
   createColors(chart) {
