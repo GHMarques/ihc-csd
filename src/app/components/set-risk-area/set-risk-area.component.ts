@@ -111,10 +111,10 @@ export class SetRiskAreaComponent implements OnInit {
       });
 
       map.target.on('click', 'riskArea', function (e) {
-        console.log(e.features[0]);
+        //console.log(e.features[0]);
         new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<b>Nome:</b> ' + e.features[0].properties.name + '<br/>' + '<b>Risco: </b>' + e.features[0].properties.risk)
+        .setHTML('<b>Nome:</b> ' + e.features[0].properties.name + '<br/>' + '<b>Situação: </b>' + e.features[0].properties.risk)
         .addTo(map.target);
         });
     });

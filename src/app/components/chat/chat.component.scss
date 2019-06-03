@@ -5,7 +5,10 @@ $base-color: mat-color($csd-primary, default);
     right: 0;
 	bottom: 0;
 	position: fixed;
-	display: inline;
+  display: inline;
+  button {
+    background-color: #063b5e;
+  }
 }
 
 #open-chat-btn {

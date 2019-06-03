@@ -2,7 +2,7 @@
   <div class="logo-holder">
     <img src="assets/csd.jpeg">
   </div>
-  <mat-card>
+  <mat-card style="margin: 20px 0;">
 
     <h1>Login</h1>
 
@@ -29,9 +29,9 @@
             </mat-error>
           </mat-form-field>
 
-          <button mat-raised-button color="primary" (click)="login()">Login</button>
+          <button style="background-color: #063b5e" mat-raised-button color="primary" (click)="login()">Login</button>
           <a [routerLink]="['/sign-up']">
-            <button mat-raised-button color="primary"> Criar Conta</button>
+            <button style="background-color: #063b5e" mat-raised-button color="primary"> Criar Conta</button>
           </a>
         </form>
       </mat-card-content>

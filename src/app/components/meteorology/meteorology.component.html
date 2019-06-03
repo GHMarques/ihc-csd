@@ -29,7 +29,7 @@
         <mat-form-field>
           <mat-label>Nível real da chuva</mat-label>
           <select matNativeControl required>
-            <option *ngFor="let quantity of [0,1,2,3,4,5,6,7,8,9]" value="quantity">{{quantity}}</option>
+            <option *ngFor="let quantity of ['0 - Sem chuva',1,2,3,4,'5 - Moderado',6,7,8,9, '10 - Tempestade']" value="quantity">{{quantity}}</option>
           </select>
         </mat-form-field>
       

@@ -67,6 +67,69 @@ export class AreaSituationComponent implements OnInit {
       }
     });
 
+    this.map.on('load', function (map) {
+      map.target.addLayer({
+        'id': 'riskArea',
+        'type': 'fill',
+        'source': {
+          'type': 'geojson',
+          'data': {
+            'type': 'FeatureCollection',
+            'features': [{
+              'type': 'Feature',
+              'properties': {
+                'name': 'CEFET - Campus 2',
+                'risk': '1'
+              },
+              'geometry': {
+                'type': 'Polygon',
+                'coordinates': [[
+                  [-43.999200, -19.938327],
+                  [-43.999200, -19.938700],
+                  [-43.998803, -19.938700],
+                  [-43.998819, -19.938327]]]
+              }
+            }, {
+              'type': 'Feature',
+              'properties': {
+                'name': 'CEFET - Campus 1',
+                'risk': '2'
+              },
+              'geometry': {
+                'type': 'Polygon',
+                'coordinates': [[
+                  [-43.977809, -19.929904],
+                  [-43.977711, -19.930382],
+                  [-43.976471, -19.930202],
+                  [-43.976649, -19.929681]]]
+              }
+              }]
+          }
+        },
+        'layout': {},
+        'paint': {
+          'fill-color': '#ff0000',
+          'fill-opacity': 0.3
+        }
+      });
+
+      map.target.on('mouseenter', 'riskArea', function () {
+        map.target.getCanvas().style.cursor = 'pointer';
+      });
+
+      map.target.on('mouseleave', 'riskArea', function () {
+        map.target.getCanvas().style.cursor = '';
+      });
+
+      map.target.on('click', 'riskArea', function (e) {
+        //console.log(e.features[0]);
+        new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML('<b>Nome:</b> ' + e.features[0].properties.name + '<br/>' + '<b>Situação: </b>' + e.features[0].properties.risk)
+        .addTo(map.target);
+        });
+    });
+
     // this.map.addControl(new MapboxGeocoder({
     //   accessToken: mapboxgl.accessToken,
     //   localGeocoder: this.forwardGeocoder,
@@ -96,6 +159,6 @@ export class AreaSituationComponent implements OnInit {
 
   handleMap(event){
     this.showMap = event.index;
-    console.log(this.showMap)
+    //console.log(this.showMap)
   }
 }
